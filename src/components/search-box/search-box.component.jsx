@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component } from 'react' ;
 
 class SearchBox extends Component {
 
@@ -8,8 +8,10 @@ class SearchBox extends Component {
             className='search-box'
             type='search'
             placeholder='Search monsters'
-            onChange={onSearchChange}
+            // onChange={onSearchChange}
             />
         )
     }
 }
+
+export default SearchBox;

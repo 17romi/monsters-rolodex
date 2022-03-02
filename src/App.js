@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { CardList } from './components/card-list/card-list.component';
+import { SearchBox } from './components/search-box/search-box.component';
 
 class App extends Component {
   
@@ -20,6 +21,10 @@ class App extends Component {
   }
 
   render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter( monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase()))
+
     return (
       <div className="App">
       <input type='search' placeholder='Monsters' onChange={e => this.setState({ searchField: e.target.value})}/>
@@ -30,6 +35,3 @@ class App extends Component {
 }
 
 export default App;
-
-//ignore this
-// wtf did i just do lol
