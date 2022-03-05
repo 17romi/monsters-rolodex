@@ -1,8 +1,11 @@
 .card-container {
     display: flex;
     flex-direction: column;
-    background-color: #95dada;
-    border: 1px solid grey;
+    background: linear-gradient(
+    to left,
+    rgb(226, 228, 130) 0%,
+    rgb(178, 230, 148) 100%);
+    border: 4px solid grey;
     border-radius: 5px;
     padding: 25px;
     cursor: pointer;
