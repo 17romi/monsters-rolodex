@@ -9,13 +9,12 @@ class SearchBox extends Component {
             type='search'
             placeholder='Search monsters'
             onChange={(event) => {
-                console.log(event.target.value)
-                const searchString = event.target.value.toLocaleLowerCase();
-                const filteredMonsters = this.state.monsters.filter((monster) => {
-                    return monster.name.toLocaleLowerCase().includes(searchString);
-                });
-            
-            }
+                const searchField = event.target.value.toLocaleLowerCase();
+                this.setState(() => {
+                    return { searchField };
+                    
+                })
+            }}
             />
         )
     }
