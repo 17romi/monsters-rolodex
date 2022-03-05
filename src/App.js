@@ -14,6 +14,13 @@ class App extends Component {
     };
   }
 
+  // onSearchChange = (event) => {
+  //   const searchField = event.target.value.toLocaleLowerCase();
+  //   this.setState(() => {
+  //     return { searchField };
+  //   })
+  // }
+
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json()) 
